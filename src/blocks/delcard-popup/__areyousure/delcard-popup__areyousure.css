@@ -1,0 +1,12 @@
+.delcard-popup__areyousure {
+  font: normal 900 18px/1.2 'Inter', sans-serif;
+  width: 238px;
+  margin: 0 0 38px 0;
+}
+
+@media (min-width: 600px) {
+  .delcard-popup__areyousure {
+    font: normal 900 24px/1.2 'Inter', sans-serif;
+    width: 358px;
+  }
+}

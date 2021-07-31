@@ -1,0 +1,13 @@
+.header {
+  max-width: 880px;
+  width: 100%;
+  background: no-repeat 27px min(calc(0.017708 * 100vw + 22.3333px), 45px) / min(calc(0.039854 * 100vw + 90.987px), 142px) calc(0.008958 * 100vw + 21.53px) url(../../images/mesto-rus.svg);
+  padding-top: min(calc(0.036458 * 100vw + 72.3333px), 119px);
+  border-bottom: 1px solid #54545470;
+}
+
+@media (min-width: 880px) {
+  .header {
+    background: no-repeat 0 min(calc(0.017708 * 100vw + 22.3333px), 45px) / min(calc(0.039854 * 100vw + 90.987px), 142px) calc(0.008958 * 100vw + 21.53px) url(../../images/mesto-rus.svg);
+  }
+}

@@ -1,0 +1,9 @@
+.card__place {
+  margin: 0 0 0 20px;
+  padding: 0;
+  max-width: 190px;
+  font: normal 900 24px/1.2 'Inter', sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

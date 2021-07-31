@@ -1,0 +1,9 @@
+.fullszimg-popup__title {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font: normal normal 12px/1.2 'Inter', Arial, sans-serif;
+  position: absolute;
+  left: 0;
+  bottom: -22px;
+}

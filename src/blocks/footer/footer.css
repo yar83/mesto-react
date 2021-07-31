@@ -1,0 +1,11 @@
+.footer {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 880px;
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+}

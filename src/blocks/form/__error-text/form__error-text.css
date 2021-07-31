@@ -1,0 +1,14 @@
+.form__error-text {
+  color: #ff0000;
+  font: normal 400 12px/1.2 'Inter', sans-serif;
+  max-width: 238px;
+  position: absolute;
+  top: 45px;
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .form__error-text {
+    max-width: 358px;
+  }
+}

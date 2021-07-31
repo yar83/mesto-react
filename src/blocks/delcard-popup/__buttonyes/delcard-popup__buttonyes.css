@@ -1,0 +1,25 @@
+.delcard-popup__buttonyes {
+  box-sizing: border-box;
+  width: 238px;
+  height: 46px;
+  padding: 0;
+  margin: 0;
+  background: #000;
+  color: #fff;
+  border: unset;
+  border-radius: 2px;
+  font: normal normal 14px/1.2 'Inter', Arial, sans-serif;
+}
+
+@media (min-width: 600px) {
+  .delcard-popup__buttonyes {
+    width: 358px;
+    height: 50px;
+    font: normal normal 18px/1.2 'Inter', Arial, sans-serif;
+  }
+}
+
+.delcard-popup__buttonyes:hover, .delcard-popup__buttonyes:focus {
+  opacity: .8;
+  cursor: pointer;
+}

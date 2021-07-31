@@ -1,0 +1,11 @@
+.profile__name {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font: normal 500 min(calc(0.026786 * 100vw + 18.428572px), 42px)/1.2 'Inter', sans-serif;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  grid-area: name;
+}

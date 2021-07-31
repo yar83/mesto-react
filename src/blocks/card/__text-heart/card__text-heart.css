@@ -1,0 +1,9 @@
+.card__text-heart {
+  width: 282px;
+  height: 79px;
+  background: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}

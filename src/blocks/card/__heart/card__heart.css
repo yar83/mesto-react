@@ -1,0 +1,14 @@
+.card__heart {
+  width: 22px;
+  height: 19px;
+  border: unset;
+  outline: unset;
+  margin: 0;
+  background: no-repeat center / contain url(../../../images/heart.svg);
+  transition: opacity linear .2s;
+}
+
+.card__heart:hover {
+  opacity: .5;
+  cursor: pointer;
+}

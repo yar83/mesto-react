@@ -1,0 +1,20 @@
+.profile__name-button {
+  display: grid;
+  grid-template-columns: min(calc(0.010714 * 100vw + 14.571428px), 12px) minmax(10px, max-content) 20px;
+  grid-template-rows: max-content max-content;
+  grid-template-areas:
+    ". name edit"
+    ". about .";
+  gap: 0 min(calc(0.014286 * 100vw + 5.428571px), 18px);
+  max-width: 282px;
+  margin: 26px 0 0 0;
+}
+
+@media (min-width: 600px) {
+  .profile__name-button {
+    grid-template-columns: min(calc(0.010714 * 100vw + 14.571428px), 12px) minmax(10px, max-content) 20px;
+    gap: 0 min(calc(0.014286 * 100vw + 5.428571px), 18px);
+    margin: 0 20px 0 0;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+.profile__avatar-edit {
+  width: 26px;
+  height: 26px;
+  border: none;
+  outline: none;
+  background: no-repeat center / 26px url(../../../images/pensil.svg);
+  position: absolute;
+  top: calc(120px/2 - 26px/2);
+  left: calc(120px/2 - 26px/2);
+  transition: opacity .4s linear;
+}
+
+.profile__avatar-edit:hover {
+  cursor: pointer;
+  opacity: .6;
+}

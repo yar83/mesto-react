@@ -1,0 +1,26 @@
+.popup__close {
+  width: 36.77px;
+  height: 36.77px;
+  background: no-repeat center / 26px url(../../../images/close-cross.svg);
+  position: absolute;
+  top: -50.39px;
+  right: 0;
+  transition: opacity linear .3s;
+  cursor: pointer;
+  border: unset;
+  outline: unset;
+}
+
+@media (min-width: 600px) {
+  .popup__close {
+    width: 40px;
+    height: 40px;
+    background: no-repeat center / 40px url(../../../images/close-cross.svg);
+    top: -46.56px;
+    right: -46.56px;
+  }
+}
+
+.popup__close:hover {
+  opacity: .6;
+}

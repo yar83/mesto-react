@@ -1,0 +1,15 @@
+.profile__about {
+  color: #fff;
+  padding: 14px 0 36px;
+  margin: 0;
+  font: normal 400 min(calc(0.007143 * 100vw + 11.714286px), 18px)/1 'Inter', sans-serif;
+  grid-area: about;
+  justify-self: center;
+}
+
+@media (min-width: 600px) {
+  .profile__about {
+    justify-self: left;
+    padding: 16px 0 0;
+  }
+}
