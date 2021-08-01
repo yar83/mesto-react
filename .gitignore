@@ -19,6 +19,7 @@
 .env.production.local
 *.swp
 .*.swp
+.vimrc
 
 npm-debug.log*
 yarn-debug.log*
