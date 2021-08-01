@@ -1,7 +1,12 @@
-const Card = ( {card} ) => {
+const Card = ( {card, clickHandler} ) => {
+  
+  function handleClick() {
+    clickHandler(card);
+  }
+
   return (
-      <li className="card" key={`${card._id}`}>
-      <img className="card__picture" src={`${card.link}`} alt={`Изображение ${card.name}`} />
+    <li className="card" key={card._id}>
+      <img className="card__picture" src={`${card.link}`} alt={`Изображение ${card.name}`} onClick={handleClick} />
       <button type="button" className="card__trashbin"></button>
       <div className="card__text-heart">
       <h2 className="card__place">{card.name}</h2>

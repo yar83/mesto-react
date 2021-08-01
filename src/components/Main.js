@@ -5,7 +5,7 @@ import Card from './Card';
 const Main = (props) => {
 
   //get callbacks by destructuring buttonHandlers object
-  const { handleEditAvatarClick, handleEditProfileClick, handleAddPlaceClick } = props.buttonsHandlers; 
+  const { handleEditAvatarClick, handleEditProfileClick, handleAddPlaceClick, handleCardClick } = props.buttonsHandlers; 
 
   const [userData, setUserData] = React.useState({name: '', description: '', avatar: ''});
   const [cards, setCards] = React.useState([]);
@@ -47,7 +47,7 @@ const Main = (props) => {
       </section>
       <section className="places">
         <ul className="places__list">
-          {cards.map(card => <Card card={card} />)}
+          {cards.map(card => <Card card={card} clickHandler={handleCardClick} />)}
         </ul>
       </section>
     </main>

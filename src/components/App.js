@@ -8,10 +8,12 @@ import ImagePopup from './ImagePopup';
 
 const App = () => {
 
-  const [isPopupOpen, setPopupState] = React.useState({profile: false, addPlace: false, avatar: false});
+  // Image popup visibility state and its content is separated intentionally to implement smooth closing
+  const [isPopupOpen, setPopupState] = React.useState({profile: false, addPlace: false, avatar: false, bigPic: false});
+  const [selectedCard, setSelectedCardData] = React.useState({src: '', title: ''});
 
   const closeAllPopups = () => {
-    setPopupState({...isPopupOpen, avatar: false, profile: false, addPlace: false});
+    setPopupState({...isPopupOpen, avatar: false, profile: false, addPlace: false, bigPic: false});
   }
 
   const buttonsHandlers = {
@@ -26,6 +28,11 @@ const App = () => {
     handleAddPlaceClick: () => {
       setPopupState({...isPopupOpen, addPlace: true});
     },
+
+    handleCardClick: ( {link, name } ) => {
+      setPopupState({...isPopupOpen, bigPic: true});
+      setSelectedCardData({...selectedCard, src:link, title: name});
+    },
   }
 
 
@@ -38,7 +45,7 @@ const App = () => {
       <PopupWithForm name="edit-avatar" title="Обновить аватар" isOpen={isPopupOpen.avatar} onClose={closeAllPopups} />
       <PopupWithForm name="add-place" title="Новое место" isOpen={isPopupOpen.addPlace} onClose={closeAllPopups} />
       <PopupWithForm name="confirm-action" title="Вы уверены?" />
-      <ImagePopup />
+      <ImagePopup isOpen={isPopupOpen.bigPic} card={selectedCard} onClose={closeAllPopups} />
     </div>
   );
 }
