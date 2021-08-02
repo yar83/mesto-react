@@ -5,7 +5,7 @@ const Card = ( {card, clickHandler} ) => {
   }
 
   return (
-    <li className="card" key={card._id}>
+    <li className="card">
       <img className="card__picture" src={`${card.link}`} alt={`Изображение ${card.name}`} onClick={handleClick} />
       <button type="button" className="card__trashbin"></button>
       <div className="card__text-heart">
