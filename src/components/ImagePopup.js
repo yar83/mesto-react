@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 const ImagePopup = ( {isOpen, card, onClose} ) => {
   return (
     <div className={`popup fullszimg-popup ${isOpen ? 'popup_opened' : ''}`}>
@@ -8,6 +11,15 @@ const ImagePopup = ( {isOpen, card, onClose} ) => {
       </div>
     </div>
   );
-}
+};
+
+ImagePopup.propTypes = {
+  isOpen: PropTypes.bool,
+  card: PropTypes.shape({
+    src: PropTypes.string,
+    title: PropTypes.string,
+  }),
+  onClose: PropTypes.func,
+};
 
 export default ImagePopup;
