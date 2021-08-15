@@ -109,4 +109,4 @@ class Api {
   }
 }
 
-export const api = new Api(apiCredits);
+export default new Api(apiCredits);
