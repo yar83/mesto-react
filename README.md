@@ -1,5 +1,5 @@
-[ENG](#education-project-place)<br>
-[RUS](#учебный-проект-место)
+[ENG](#education-project-place-reactjs)<br>
+[RUS](#учебный-проект-место-reactjs)
 
 ## Education project "Place (React.JS)"
 

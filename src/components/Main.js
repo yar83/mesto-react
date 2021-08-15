@@ -46,4 +46,11 @@ const Main = (props) => {
   );
 };
 
+Main.propTypes = {
+  buttonsHandlers: PropTypes.object,
+  onCardLike: PropTypes.func,
+  onCardDelete: PropTypes.func,
+  cards: PropTypes.array,
+};
+
 export default Main;
