@@ -123,7 +123,7 @@ const App = () => {
     setEditAvatarPopupState(false);
     setBigPicPopupState(false);
   };
-
+  /*
   const buttonsHandlers = {
     handleEditProfileClick: () => {
       setEditProfilePopupState(true);
@@ -142,13 +142,34 @@ const App = () => {
       setSelectedCardData({...selectedCard, src: link, title: name});
     },
   };
+  */
+  const handleEditProfileClick = () => {
+    setEditProfilePopupState(true);
+  };
+
+  const handleAddPlaceClick = () => {
+    setAddPlacePopupState(true);
+  };
+
+  const handleEditAvatarClick = () => {
+    setEditAvatarPopupState(true);
+  };
+
+  const handleCardClick = ( {link, name} ) => {
+    setBigPicPopupState(true);
+    setSelectedCardData({...selectedCard, src: link, title: name});
+  };
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
         <Header />
         <Main
-          buttonsHandlers={buttonsHandlers}
+          // buttonsHandlers={buttonsHandlers}
+          onAvatarClick={handleEditAvatarClick}
+          onProfileClick={handleEditProfileClick}
+          onAddPlaceClick={handleAddPlaceClick}
+          onCardClick={handleCardClick}
           onCardLike={handleCardLike}
           onCardDelete={handleCardDelete}
           cards={cards}

@@ -12,10 +12,10 @@ const Main = (props) => {
     handleCardClick,
   } = props.buttonsHandlers;
   */
-  const handleEditAvatarClick = props.buttonsHandlers.handleEditAvatarClick;
-  const handleEditProfileClick = props.buttonsHandlers.handleEditProfileClick;
-  const handleAddPlaceClick = props.buttonsHandlers.handleAddPlaceClick;
-  const handleCardClick = props.buttonsHandlers.handleCardClick;
+  const handleEditAvatarClick = props.onAvatarClick;
+  const handleEditProfileClick = props.onProfileClick;
+  const handleAddPlaceClick = props.onAddPlaceClick;
+  const handleCardClick = props.onCardClick;
 
   const currentUser = useContext(CurrentUserContext);
 
@@ -53,7 +53,10 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  buttonsHandlers: PropTypes.object,
+  onAvatarClick: PropTypes.func,
+  onProfileClick: PropTypes.func,
+  onAddPlaceClick: PropTypes.func,
+  onCardClick: PropTypes.func,
   onCardLike: PropTypes.func,
   onCardDelete: PropTypes.func,
   cards: PropTypes.array,
