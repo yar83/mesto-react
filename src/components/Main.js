@@ -4,6 +4,8 @@ import Card from './Card';
 import PropTypes from 'prop-types';
 
 const Main = (props) => {
+  // Непропущенный тестами лаконичный вариант деструктуризации
+  // содержащего обработчики объекта из переданного пропса.
   /*
   const {
     handleEditAvatarClick,

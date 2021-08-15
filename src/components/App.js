@@ -11,6 +11,8 @@ import AddPlacePopup from './AddPlacePopup';
 import {CurrentUserContext} from '../contexts/CurrentUserContext';
 
 const App = () => {
+  // Оставляю для возврата к возможному варианту независимого
+  // подтягивания данных с сервена
   /*
   const [currentUser, setCurrentUser] = useState({});
   useEffect(() => {
@@ -123,6 +125,8 @@ const App = () => {
     setEditAvatarPopupState(false);
     setBigPicPopupState(false);
   };
+  // Тесты не пропустили передачу функций, как свойств объекта,
+  // оставлю себе на будущее, как более лаконичная запись
   /*
   const buttonsHandlers = {
     handleEditProfileClick: () => {
