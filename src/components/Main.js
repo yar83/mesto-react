@@ -4,12 +4,14 @@ import Card from './Card';
 import PropTypes from 'prop-types';
 
 const Main = (props) => {
+  /*
   const {
     handleEditAvatarClick,
     handleEditProfileClick,
     handleAddPlaceClick,
     handleCardClick,
   } = props.buttonsHandlers;
+  */
 
   const currentUser = useContext(CurrentUserContext);
 
@@ -19,25 +21,25 @@ const Main = (props) => {
         <div className="profile__avatar-container">
           <img src={`${currentUser.avatar}`} className="profile__avatar-picture" alt="Изображение, описывающее владельца профиля"/>
           <div className="profile__curtain">
-            <button className="profile__avatar-edit" onClick={handleEditAvatarClick} type="button" aria-label="Кнопка вызова формы редактирования картинки профиля"></button>
+            <button className="profile__avatar-edit" onClick={props.buttonsHandlers.handleEditAvatarClick} type="button" aria-label="Кнопка вызова формы редактирования картинки профиля"></button>
           </div>
         </div>
         <div className="profile__name-button">
           <h1 className="profile__name">{`${currentUser.name}`}</h1>
-          <button className="profile__button-edit" onClick={handleEditProfileClick} type="button" aria-label="Кнопка вызова формы редактирования персональных данных"></button>
+          <button className="profile__button-edit" onClick={props.buttonsHandlers.handleEditProfileClick} type="button" aria-label="Кнопка вызова формы редактирования персональных данных"></button>
           <p className="profile__about">{`${currentUser.about}`}</p>
         </div>
-        <button className="profile__button-add" onClick={handleAddPlaceClick} type="button" aria-label="Кнопка вызова формы добавления новых мест"></button>
+        <button className="profile__button-add" onClick={props.buttonsHandlers.handleAddPlaceClick} type="button" aria-label="Кнопка вызова формы добавления новых мест"></button>
       </section>
       <section className="places">
         <ul className="places__list">
-          {props.cards.map((item) => {
+          {props.cards.map((card) => {
             return <Card
-              card={item}
+              card={card}
               onCardLike={props.onCardLike}
               onCardDelete={props.onCardDelete}
-              clickHandler={handleCardClick}
-              key={item._id}
+              clickHandler={props.buttonsHandlers.handleCardClick}
+              key={card._id}
             />;
           })}
         </ul>
