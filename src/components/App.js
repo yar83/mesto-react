@@ -11,6 +11,7 @@ import AddPlacePopup from './AddPlacePopup';
 import {CurrentUserContext} from '../contexts/CurrentUserContext';
 
 const App = () => {
+  /*
   const [currentUser, setCurrentUser] = useState({});
   useEffect(() => {
     api.getUser()
@@ -27,6 +28,19 @@ const App = () => {
     api.getInitialCards()
       .then((res) => {
         setCards(res);
+      })
+      .catch((err) => {
+        console.log(`Невозможно получить начальные данные с сервера ${err}`);
+      });
+  }, []);
+  */
+  const [currentUser, setCurrentUser] = useState({});
+  const [cards, setCards] = useState([]);
+  useEffect(() => {
+    Promise.all([api.getUser(), api.getInitialCards()])
+      .then((values) => {
+        setCurrentUser(values[0]);
+        setCards(values[1]);
       })
       .catch((err) => {
         console.log(`Невозможно получить начальные данные с сервера ${err}`);
