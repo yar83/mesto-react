@@ -31,13 +31,13 @@ const Main = (props) => {
       </section>
       <section className="places">
         <ul className="places__list">
-          {props.currentCards.map((card) => {
+          {props.cards.map((item) => {
             return <Card
-              card={card}
+              card={item}
               onCardLike={props.onCardLike}
               onCardDelete={props.onCardDelete}
               clickHandler={handleCardClick}
-              key={card._id}
+              key={item._id}
             />;
           })}
         </ul>
@@ -50,7 +50,7 @@ Main.propTypes = {
   buttonsHandlers: PropTypes.object,
   onCardLike: PropTypes.func,
   onCardDelete: PropTypes.func,
-  currentCards: PropTypes.array,
+  cards: PropTypes.array,
 };
 
 export default Main;

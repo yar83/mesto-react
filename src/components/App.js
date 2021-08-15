@@ -137,7 +137,7 @@ const App = () => {
           buttonsHandlers={buttonsHandlers}
           onCardLike={handleCardLike}
           onCardDelete={handleCardDelete}
-          currentCards={cards}
+          cards={cards}
         />
         <Footer />
         <EditProfilePopup
