@@ -48,10 +48,6 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  handleEditAvatarClick: PropTypes.func,
-  handleEditProfileClick: PropTypes.func,
-  handleAddPlaceClick: PropTypes.func,
-  handleCardClick: PropTypes.func,
   buttonsHandlers: PropTypes.object,
   onCardLike: PropTypes.func,
   onCardDelete: PropTypes.func,
