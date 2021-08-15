@@ -4,7 +4,6 @@ import Card from './Card';
 import PropTypes from 'prop-types';
 
 const Main = (props) => {
-  // get callbacks by destructuring buttonHandlers object
   const {
     handleEditAvatarClick,
     handleEditProfileClick,
@@ -32,7 +31,7 @@ const Main = (props) => {
       </section>
       <section className="places">
         <ul className="places__list">
-          {props.cards.map((card) => {
+          {props.currentCards.map((card) => {
             return <Card
               card={card}
               onCardLike={props.onCardLike}
@@ -51,7 +50,7 @@ Main.propTypes = {
   buttonsHandlers: PropTypes.object,
   onCardLike: PropTypes.func,
   onCardDelete: PropTypes.func,
-  cards: PropTypes.array,
+  currentCards: PropTypes.array,
 };
 
 export default Main;
