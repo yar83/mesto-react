@@ -4,12 +4,18 @@ import Card from './Card';
 import PropTypes from 'prop-types';
 
 const Main = (props) => {
+  /*
   const {
     handleEditAvatarClick,
     handleEditProfileClick,
     handleAddPlaceClick,
     handleCardClick,
   } = props.buttonsHandlers;
+  */
+  const handleEditAvatarClick = props.buttonsHandlers.handleEditAvatarClick;
+  const handleEditProfileClick = props.buttonsHandlers.handleEditProfileClick;
+  const handleAddPlaceClick = props.buttonsHandlers.handleAddPlaceClick;
+  const handleCardClick = props.buttonsHandlers.handleCardClick;
 
   const currentUser = useContext(CurrentUserContext);
 
