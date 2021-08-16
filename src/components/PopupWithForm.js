@@ -7,7 +7,7 @@ const PopupWithForm = (props) => {
       <div className="popup__container">
         <button className={`popup__close popup__close_${props.name}`} onClick={props.onClose} type="button" aria-label="Кнопка, чтобы закрыть попап"></button>
         <div className="form">
-          <form className={`form__entity form__entity_${props.name}`} noValidate name={`${props.name}`} onSubmit={props.onSubmit}>
+          <form className={`form__entity form__entity_${props.name}`} name={`${props.name}`} onSubmit={props.onSubmit}>
             <h2 className="form__title">{props.title}</h2>
             <fieldset className="form__items">
               {props.children}

@@ -147,6 +147,19 @@ const App = () => {
     },
   };
   */
+
+  useEffect(() => {
+    const closeByEscape = (e) => {
+      if (e.key === 'Escape') {
+        closeAllPopups();
+      }
+    };
+
+    document.addEventListener('keydown', closeByEscape);
+
+    return () => document.removeEventListener('keydown', closeByEscape);
+  }, []);
+
   const handleEditProfileClick = () => {
     setEditProfilePopupState(true);
   };

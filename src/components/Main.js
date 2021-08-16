@@ -40,13 +40,15 @@ const Main = (props) => {
       <section className="places">
         <ul className="places__list">
           {props.cards.map((card) => {
-            return <Card
-              card={card}
-              onCardLike={props.onCardLike}
-              onCardDelete={props.onCardDelete}
-              clickHandler={handleCardClick}
-              key={card._id}
-            />;
+            return (
+              <Card
+                card={card}
+                onCardLike={props.onCardLike}
+                onCardDelete={props.onCardDelete}
+                clickHandler={handleCardClick}
+                key={card._id}
+              />
+            ); // интересно, что линтер требует от меня здесь точку с запятой и наотрез отказывается делать сборку
           })}
         </ul>
       </section>
